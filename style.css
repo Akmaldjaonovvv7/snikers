@@ -99,7 +99,7 @@
     height: 100%;
   }
   
-  .video__baner .baner__vid .video {
+  .video__baner .baner__vid img {
     width: 100%;
     height: 100%;
     object-fit: cover;

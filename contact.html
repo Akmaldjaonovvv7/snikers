@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snickers Shop ‒ Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar__top">
+        <a href="index.html"><p>HOME</p></a>
+        <a href="contact.html"><p>CONTACT</p></a>
+        <a href="#"><p><i class="fa-solid fa-magnifying-glass"></i> SEARCH</p></a>
+    </div>
+    <div class="navbar__bottom">
+        <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
+        <ul class="contener">
+           <li><a class="btn" href="index.html">HOME</a></li>
+           <li><a class="btn" href="products.html">PRODUCTS</a></li>
+           <li><a class="btn" href="contact.html">CONTACT</a></li>
+           <li><a class="btn" href="cart.html">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <span id="cart-count-contact">0</span>
+             </a>
+           </li>
+        </ul>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <section id="contact-section">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label for="c-name">Ism:</label>
+      <input type="text" id="c-name" required />
+
+      <label for="c-email">Email:</label>
+      <input type="email" id="c-email" required />
+
+      <label for="c-message">Xabaringiz:</label>
+      <textarea id="c-message" rows="5" required></textarea>
+
+      <button type="submit">Yuborish</button>
+    </form>
+    <div id="contact-success" class="hidden">
+      <p>Xabaringiz uchun rahmat! Tez orada bog‘lanamiz.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SNICKERS® - A Mars Company</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

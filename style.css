@@ -1,0 +1,583 @@
+/* ======= Umumiy Sozlamalar ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* ======= Navbar ======= */
+  .navbar {
+    width: 100%;
+  }
+  
+  /* Navbar yuqori qismi */
+  .navbar__top {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 8px 20px;
+    font-size: 0.9em;
+  }
+  
+  .navbar__top a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+  }
+  
+  .navbar__top a:hover {
+    color: #0073e6;
+  }
+  
+  /* Navbar pastki qismi */
+  .navbar__bottom {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar__bottom img {
+    max-height: 50px;
+  }
+  
+  .navbar__bottom .contener {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  }
+  
+  .navbar__bottom .contener li {
+    list-style: none;
+  }
+  
+  .navbar__bottom .contener li .btn {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+  }
+  
+  .navbar__bottom .contener li .btn:hover {
+    color: #0073e6;
+  }
+  
+  #cart-count,
+  #cart-count-products,
+  #cart-count-cart,
+  #cart-count-contact {
+    background-color: #e62020;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  
+  /* ======= Video Banner ======= */
+  .video__baner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .video__baner .baner__vid {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video__baner .baner__vid .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Hundirgan matn (overlay) */
+  .baner__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+  
+  .baner__text .texts p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .baner__text .texts h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .baner__text .vid__btn {
+    background-color: #e62020;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .baner__text .vid__btn:hover {
+    background-color: #b31818;
+  }
+  
+  /* ======= Featured & Products Grid ======= */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  
+  .product-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .product-card h3 {
+    font-size: 1.2em;
+    margin: 15px;
+    color: #333;
+  }
+  
+  .product-card p {
+    font-size: 0.95em;
+    margin: 0 15px 15px;
+    color: #555;
+  }
+  
+  .product-card .price {
+    font-weight: bold;
+    margin: 0 15px 10px;
+  }
+  
+  .product-card button {
+    margin: 0 15px 15px;
+    padding: 10px 20px;
+    background-color: #e62020;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background 0.3s;
+  }
+  
+  .product-card button:hover {
+    background-color: #b31818;
+  }
+  
+  /* ======= Cart Section ======= */
+  #cart-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #cart-items {
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .cart-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 15px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  .cart-item-details h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .cart-item-details p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .cart-item-details .quantity-input {
+    width: 50px;
+    padding: 4px;
+    margin-right: 10px;
+  }
+  
+  .cart-item-details button.remove-btn {
+    background: none;
+    border: none;
+    color: #e62020;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: color 0.2s;
+  }
+  
+  .cart-item-details button.remove-btn:hover {
+    color: #b31818;
+  }
+  
+  #cart-summary {
+    text-align: right;
+  }
+  
+  #cart-summary p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  #cart-summary button#checkout-btn {
+    padding: 10px 25px;
+    background-color: #e62020;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #cart-summary button#checkout-btn:hover {
+    background-color: #b31818;
+  }
+  
+  /* ======= Checkout Modal ======= */
+  .modal {
+    display: none; /* Dastlab yashirin */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 15px;
+    color: #e62020;
+  }
+  
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modal-content label {
+    text-align: left;
+    font-size: 0.9em;
+  }
+  
+  .modal-content input {
+    padding: 8px;
+    font-size: 1em;
+  }
+  
+  .modal-content button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e62020;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+  }
+  
+  .modal-content button[type="submit"]:hover {
+    background-color: #b31818;
+  }
+  
+  /* ======= Contact Section ======= */
+  #contact-section {
+    padding: 60px 20px;
+    background-color: #ffecec;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #contact-section label {
+    text-align: left;
+    font-size: 0.9em;
+  }
+  
+  #contact-section input,
+  #contact-section textarea {
+    padding: 8px;
+    font-size: 1em;
+    resize: vertical;
+  }
+  
+  #contact-section button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e62020;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+  }
+  
+  #contact-section button[type="submit"]:hover {
+    background-color: #b31818;
+  }
+  
+  #contact-success {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* ======= Responsive Sozlamalar ======= */
+  @media (max-width: 768px) {
+    .navbar__bottom .contener {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    #cart-items .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item img {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1,
+    .baner__text .texts h1 {
+      font-size: 1.8em;
+    }
+  
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+
+  /* Umumiy sozlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fbe8a6, #f4976c);
+    color: #2c2c2c;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4b2e2e;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #fbe8a6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #fff0e1;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 40px;
+    color: #4b2e2e;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .hero-text button {
+    background-color: #4b2e2e;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .hero-text button:hover {
+    background-color: #703e3e;
+  }
+  
+  .hero-img img {
+    max-width: 400px;
+    border-radius: 20px;
+  }
+  
+  /* Products */
+  .products {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .products h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #4b2e2e;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+  
+  .product-card {
+    background-color: #f8d9aa;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: contain;
+  }
+  
+  .product-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #4b2e2e;
+  }
+  
+  .product-card p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4b2e2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }

@@ -400,6 +400,18 @@
   .hidden {
     display: none;
   }
+  #featured{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 50px 0;
+  }
+  #featured h2{
+    font-size: 40px
+
+  }
+
   
   /* ======= Responsive Sozlamalar ======= */
   @media (max-width: 768px) {

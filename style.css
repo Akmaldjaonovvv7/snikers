@@ -4710,6 +4710,8 @@ footer::before {
     letter-spacing: 1px;
     border: none;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
   
   .vid__btn:hover {
@@ -4717,6 +4719,16 @@ footer::before {
     color: var(--snk-brown);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(251,232,166,0.5);
+  }
+  
+  .vid__btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(251,232,166,0.3);
+  }
+  
+  .vid__btn:focus {
+    outline: 3px solid var(--snk-yellow);
+    outline-offset: 2px;
   }
   
   .btn.secondary {
@@ -4734,12 +4746,24 @@ footer::before {
     letter-spacing: 1px;
     border: none;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
   
   .btn.secondary:hover {
     background: linear-gradient(135deg, var(--snk-orange) 0%, var(--snk-yellow) 100%);
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(251,232,166,0.5);
+  }
+  
+  .btn.secondary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(251,232,166,0.3);
+  }
+  
+  .btn.secondary:focus {
+    outline: 3px solid var(--snk-red);
+    outline-offset: 2px;
   }
   
   /* ======= Mobile Features Section Redesign ======= */
@@ -5004,6 +5028,16 @@ footer::before {
     color: var(--snk-brown);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(251,232,166,0.4);
+  }
+  
+  .product-card button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 16px rgba(251,232,166,0.3);
+  }
+  
+  .product-card button:focus {
+    outline: 3px solid var(--snk-yellow);
+    outline-offset: 2px;
   }
   
   /* ======= Mobile Interactive Experience Redesign ======= */
@@ -5343,6 +5377,8 @@ footer::before {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(230,32,32,0.3);
+    position: relative;
+    overflow: hidden;
   }
   
   .form-group .btn:hover {
@@ -5350,6 +5386,16 @@ footer::before {
     color: var(--snk-brown);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(251,232,166,0.4);
+  }
+  
+  .form-group .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 16px rgba(251,232,166,0.3);
+  }
+  
+  .form-group .btn:focus {
+    outline: 3px solid var(--snk-yellow);
+    outline-offset: 2px;
   }
   
   /* ======= Mobile Footer Redesign ======= */

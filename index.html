@@ -1,78 +1,281 @@
 <!DOCTYPE html>
 <html lang="uz">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Snickers Shop ‒ Bosh Sahifa</title>
+  <title>Snickers Shop – Bosh Sahifa</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="navbar__top">
-      <a href="index.html">
-        <p>HOME</p>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Bosh sahifa">
+        <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
       </a>
-      <a href="contact.html">
-        <p>CONTACT</p>
-      </a>
-      <a href="#">
-        <p><i class="fa-solid fa-magnifying-glass"></i> SEARCH</p>
-      </a>
-    </div>
-    <div class="navbar__bottom">
-      <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
-      <ul class="contener">
-        <li><a class="btn" href="index.html">HOME</a></li>
-        <li><a class="btn" href="products.html">PRODUCTS</a></li>
-        <li><a class="btn" href="contact.html">CONTACT</a></li>
-        <li><a class="btn" href="cart.html">
+      <ul class="navbar__links">
+        <li><a href="index.html" class="btn active">Bosh sahifa</a></li>
+        <li><a href="products.html" class="btn">Mahsulotlar</a></li>
+        <li><a href="promo.html" class="btn">Aksiya & Yangiliklar</a></li>
+        <li><a href="about.html" class="btn">Biz haqimizda</a></li>
+        <li><a href="contact.html" class="btn">Aloqa</a></li>
+        <li>
+          <a href="cart.html" class="btn" aria-label="Savatcha">
             <i class="fa-solid fa-cart-shopping"></i>
             <span id="cart-count">0</span>
           </a>
         </li>
       </ul>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
     </div>
-  </div>
+  </nav>
 
-  <!-- Video Banner -->
-  <div class="video__baner">
-    <div class="baner__vid">
-    <img src="./snickersImg.jpg" alt="">
-
-             
+  <!-- Hero Section with Video Background -->
+  <header class="hero">
+    <div class="hero__background">
+      <div class="hero__overlay"></div>
+      <video class="hero__video" autoplay loop muted poster="snickersImg.jpg">
+        <source src="https://media.istockphoto.com/id/1173552192/video/chocolate-bar.mp4" type="video/mp4">
+        <img src="snickersImg.jpg" alt="Snickers" />
+      </video>
     </div>
-  </div>
-  <div class="baner__text">
-    <div class="texts">
-      <p>Hungry?</p>
-      <h1>MAYBE YOU JUST NEED A SNICKERS.</h1>
-      <button class="vid__btn" onclick="location.href='products.html'">
-        SEE THE LINEUP
-      </button>
+    <div class="hero__content">
+      <div class="hero__text">
+        <p class="hero__subtitle">Hungry?</p>
+        <h1 class="hero__title">MAYBE YOU JUST NEED A SNICKERS.</h1>
+        <p class="hero__desc">Dive into the rich, satisfying taste of Snickers – the perfect blend of peanuts, caramel, nougat, and milk chocolate.</p>
+        <div class="hero__buttons">
+          <a href="products.html" class="vid__btn">SEE THE LINEUP</a>
+          <a href="promo.html" class="btn secondary">SPECIAL OFFERS</a>
+        </div>
+      </div>
+      <div class="hero__floating-elements">
+        <div class="floating-chocolate" data-speed="2">
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="floating-chocolate" data-speed="1.5">
+          <i class="fa fa-heart"></i>
+        </div>
+        <div class="floating-chocolate" data-speed="3">
+          <i class="fa fa-gem"></i>
+        </div>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <!-- Featured Section -->
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item" data-aos="fade-up">
+          <div class="feature-icon">
+            <i class="fa fa-leaf"></i>
+          </div>
+          <h3>Tabiiy ingredientlar</h3>
+          <p>Eng yaxshi sifatli kakao va boshqa tabiiy ingredientlar</p>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fa fa-bolt"></i>
+          </div>
+          <h3>Tezkor energiya</h3>
+          <p>Ochlikni yengadigan va energiya beradigan mahsulot</p>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fa fa-award"></i>
+          </div>
+          <h3>Jahon standartlari</h3>
+          <p>Xalqaro sifat standartlariga mos keladigan mahsulot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
   <section id="featured">
-    <h2>Featured Products</h2>
-    <div class="product-grid" id="featured-grid">
-      <!-- JavaScript orqali 3 ta mahsulot chiqariladi -->
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Eng mashhur mahsulotlar</h2>
+        <p>Mijozlarimizning eng ko'p tanlovi bo'lgan Snickers mahsulotlari</p>
+      </div>
+      <div class="product-grid" id="featured-grid">
+        <!-- JavaScript orqali 3 ta mahsulot chiqariladi -->
+      </div>
+      <div class="featured-cta" data-aos="fade-up">
+        <a href="products.html" class="btn large">Barcha mahsulotlarni ko'rish</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Experience Section -->
+  <section class="interactive-experience">
+    <div class="container">
+      <div class="experience-content" data-aos="fade-up">
+        <h2>Snickers tajribasini boshqang</h2>
+        <p>O'zingizning ideal Snickers barini yarating va maxsus takliflar bilan tanishing</p>
+        <div class="experience-cards">
+          <div class="experience-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="fa fa-magic"></i>
+            </div>
+            <h3>Maxsus Retseptlar</h3>
+            <p>Snickers bilan tayyorlanadigan mazali taomlar</p>
+            <a href="#" class="btn outline">Ko'rish</a>
+          </div>
+          <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card-icon">
+              <i class="fa fa-gift"></i>
+            </div>
+            <h3>Maxsus Takliflar</h3>
+            <p>Faqat siz uchun maxsus chegirmalar va aksiyalar</p>
+            <a href="promo.html" class="btn outline">Ko'rish</a>
+          </div>
+          <div class="experience-card" data-aos="zoom-in" data-aos-delay="600">
+            <div class="card-icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <h3>Jamoa</h3>
+            <p>Professional va tajribali mutaxassislar</p>
+            <a href="about.html" class="btn outline">Ko'rish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Mijozlarimiz fikri</h2>
+        <p>Snickers haqida mijozlarimiz nima deyishadi</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-content">
+            <p>"Snickers - bu mening eng sevimli shokolad! Har safar och bo'lganda bir dona yeyaman va hammasi yaxshi bo'ladi."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="author-info">
+              <h4>Aziza Karimova</h4>
+              <span>Doimiy mijoz</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="testimonial-content">
+            <p>"Sport mashg'ulotlaridan keyin Snickers menga kerakli energiyani beradi. Eng yaxshi shokolad bar!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="author-info">
+              <h4>Rustam Toshmatov</h4>
+              <span>Sportchi</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="testimonial-content">
+            <p>"O'g'lim Snickersni juda yaxshi ko'radi. Sifat va ta'm ajoyib. Tavsiya qilaman!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="author-info">
+              <h4>Malika Yusupova</h4>
+              <span>Ota-ona</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="home-newsletter">
+    <div class="container">
+      <div class="newsletter-content" data-aos="fade-up">
+        <h2>Yangiliklar xabarnomasi</h2>
+        <p>Eng so'nggi aksiyalar va yangiliklar haqida xabardor bo'ling</p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Email manzilingizni kiriting" required />
+            <button type="submit" class="btn">Obuna bo'lish</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 SNICKERS® - A Mars Company</p>
+    <div class="footer__container">
+      <div class="footer__brand">
+        <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
+        <span>© 2025 SNICKERS® - A Mars Company</span>
+      </div>
+      <div class="footer__links">
+        <a href="about.html">Biz haqimizda</a>
+        <a href="promo.html">Aksiya & Yangiliklar</a>
+        <a href="contact.html">Aloqa</a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Common JavaScript -->
   <script src="script.js"></script>
-</body>
+  <script>
+    // Navbar toggle
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      document.querySelector('.navbar__links').classList.toggle('navbar__links--open');
+    });
 
+    // Newsletter form handler
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Rahmat! Siz muvaffaqiyatli obuna bo\'ldingiz.');
+        this.reset();
+      }
+    });
+
+    // Floating elements animation
+    function animateFloatingElements() {
+      const elements = document.querySelectorAll('.floating-chocolate');
+      elements.forEach(element => {
+        const speed = element.getAttribute('data-speed');
+        const yPos = (window.pageYOffset * speed) / 10;
+        element.style.transform = `translateY(${yPos}px) rotate(${yPos * 0.5}deg)`;
+      });
+    }
+
+    window.addEventListener('scroll', animateFloatingElements);
+
+    // Simple AOS (Animate On Scroll) implementation
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('[data-aos]');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('aos-animate');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
+</body>
 </html>

@@ -3,49 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Snickers Shop ‒ Mahsulotlar</title>
+  <title>Snickers Shop – Mahsulotlar</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <!-- Navbar (uyg‘unlashtirilgan) -->
-  <div class="navbar">
-    <div class="navbar__top">
-        <a href="index.html"><p>HOME</p></a>
-        <a href="contact.html"><p>CONTACT</p></a>
-        <a href="#"><p><i class="fa-solid fa-magnifying-glass"></i> SEARCH</p></a>
-    </div>
-    <div class="navbar__bottom">
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Bosh sahifa">
         <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
-        <ul class="contener">
-           <li><a class="btn" href="index.html">HOME</a></li>
-           <li><a class="btn" href="products.html">PRODUCTS</a></li>
-           <li><a class="btn" href="contact.html">CONTACT</a></li>
-           <li><a class="btn" href="cart.html">
-               <i class="fa-solid fa-cart-shopping"></i>
-               <span id="cart-count-products">0</span>
-             </a>
-           </li>
-        </ul>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html" class="btn">Bosh sahifa</a></li>
+        <li><a href="products.html" class="btn active">Mahsulotlar</a></li>
+        <li><a href="promo.html" class="btn">Aksiya & Yangiliklar</a></li>
+        <li><a href="about.html" class="btn">Biz haqimizda</a></li>
+        <li><a href="contact.html" class="btn">Aloqa</a></li>
+        <li>
+          <a href="cart.html" class="btn" aria-label="Savatcha">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count-products">0</span>
+          </a>
+        </li>
+      </ul>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
     </div>
-  </div>
+  </nav>
 
-  <!-- Mahsulotlar Ro‘yxati -->
-  <section id="products">
-    <h2>Our Products</h2>
-    <div class="product-grid" id="products-grid">
-      <!-- JavaScript orqali barcha mahsulotlar chiqariladi -->
-    </div>
-  </section>
+  <main>
+    <!-- Products Section -->
+    <section id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Barcha Mahsulotlar</h2>
+          <p>Eng yaxshi Snickers mahsulotlarini tanlang</p>
+        </div>
+        
+        <!-- Product Filter -->
+        <div class="product-filter">
+          <label for="category-select">Kategoriya:</label>
+          <select id="category-select" onchange="filterProducts(this.value)">
+            <option value="all">Barcha mahsulotlar</option>
+            <option value="classic">Klassik</option>
+            <option value="almond">Bodom</option>
+            <option value="icecream">Muzqaymoq</option>
+            <option value="peanut">Yeryong'oq</option>
+            <option value="protein">Protein</option>
+            <option value="mini">Mini</option>
+            <option value="cake">Keks</option>
+            <option value="dark">Qora shokolad</option>
+            <option value="white">Oq shokolad</option>
+            <option value="crunchy">Xirillagan</option>
+            <option value="salted">Tuzli karamel</option>
+            <option value="hazelnut">Fundoq</option>
+            <option value="coconut">Kokos</option>
+            <option value="mint">Yalpiz</option>
+            <option value="orange">Apelsin</option>
+            <option value="strawberry">Qulupnay</option>
+            <option value="banana">Banan</option>
+            <option value="cherry">Gilos</option>
+            <option value="raspberry">Malina</option>
+            <option value="blueberry">Ko'k yong'oq</option>
+            <option value="vanilla">Vanil</option>
+            <option value="caramel">Karamel</option>
+            <option value="nougat">Nugat</option>
+            <option value="fudge">Faj</option>
+            <option value="toffee">Toffi</option>
+            <option value="cookies">Pechenkalar</option>
+            <option value="marshmallow">Marshmallow</option>
+            <option value="gift">Sovg'a</option>
+          </select>
+        </div>
+        
+        <div class="product-grid" id="products-grid">
+          <!-- JavaScript orqali mahsulotlar chiqariladi -->
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 SNICKERS® - A Mars Company</p>
+    <div class="footer__container">
+      <div class="footer__brand">
+        <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
+        <span>© 2025 SNICKERS® - A Mars Company</span>
+      </div>
+      <div class="footer__links">
+        <a href="about.html">Biz haqimizda</a>
+        <a href="promo.html">Aksiya & Yangiliklar</a>
+        <a href="contact.html">Aloqa</a>
+      </div>
+    </div>
   </footer>
-
   <script src="script.js"></script>
+  <script>
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      document.querySelector('.navbar__links').classList.toggle('navbar__links--open');
+    });
+  </script>
 </body>
 </html>

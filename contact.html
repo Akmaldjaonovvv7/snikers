@@ -3,61 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Snickers Shop ‒ Contact</title>
+  <title>Snickers Shop – Aloqa</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="navbar__top">
-        <a href="index.html"><p>HOME</p></a>
-        <a href="contact.html"><p>CONTACT</p></a>
-        <a href="#"><p><i class="fa-solid fa-magnifying-glass"></i> SEARCH</p></a>
-    </div>
-    <div class="navbar__bottom">
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Bosh sahifa">
         <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
-        <ul class="contener">
-           <li><a class="btn" href="index.html">HOME</a></li>
-           <li><a class="btn" href="products.html">PRODUCTS</a></li>
-           <li><a class="btn" href="contact.html">CONTACT</a></li>
-           <li><a class="btn" href="cart.html">
-               <i class="fa-solid fa-cart-shopping"></i>
-               <span id="cart-count-contact">0</span>
-             </a>
-           </li>
-        </ul>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html" class="btn">Bosh sahifa</a></li>
+        <li><a href="products.html" class="btn">Mahsulotlar</a></li>
+        <li><a href="promo.html" class="btn">Aksiya & Yangiliklar</a></li>
+        <li><a href="about.html" class="btn">Biz haqimizda</a></li>
+        <li><a href="contact.html" class="btn active">Aloqa</a></li>
+        <li>
+          <a href="cart.html" class="btn" aria-label="Savatcha">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count-contact">0</span>
+          </a>
+        </li>
+      </ul>
+      <button class="navbar__toggle" aria-label="Menu"><i class="fa fa-bars"></i></button>
     </div>
-  </div>
+  </nav>
 
-  <!-- Contact Form -->
-  <section id="contact-section">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <label for="c-name">Ism:</label>
-      <input type="text" id="c-name" required />
+  <main>
+    <section id="contact-section">
+      <h2>Aloqa</h2>
+      <div class="contact-flex">
+        <form id="contact-form">
+          <label for="c-name">Ism:</label>
+          <input type="text" id="c-name" required />
 
-      <label for="c-email">Email:</label>
-      <input type="email" id="c-email" required />
+          <label for="c-email">Email:</label>
+          <input type="email" id="c-email" required />
 
-      <label for="c-message">Xabaringiz:</label>
-      <textarea id="c-message" rows="5" required></textarea>
+          <label for="c-message">Xabaringiz:</label>
+          <textarea id="c-message" rows="5" required></textarea>
 
-      <button type="submit">Yuborish</button>
-    </form>
-    <div id="contact-success" class="hidden">
-      <p>Xabaringiz uchun rahmat! Tez orada bog‘lanamiz.</p>
-    </div>
-  </section>
+          <button type="submit">Yuborish</button>
+        </form>
+        <div class="contact-info">
+          <h3>Kontakt ma’lumotlari</h3>
+          <p><i class="fa fa-phone"></i> +998 71 123-45-67</p>
+          <p><i class="fa fa-envelope"></i> info@snickers.uz</p>
+          <p><i class="fa fa-map-marker-alt"></i> Toshkent, O‘zbekiston</p>
+          <div class="contact-map">
+            <!-- Google Map yoki boshqa xarita joyi -->
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=69.2401%2C41.2995%2C69.2701%2C41.3195&amp;layer=mapnik" style="border-radius:12px; border:none; width:100%; height:180px; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+      <div id="contact-success" class="hidden">
+        <p>Xabaringiz uchun rahmat! Tez orada bog‘lanamiz.</p>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 SNICKERS® - A Mars Company</p>
+    <div class="footer__container">
+      <div class="footer__brand">
+        <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Logo_0.png" alt="Snickers Logo" />
+        <span>© 2025 SNICKERS® - A Mars Company</span>
+      </div>
+      <div class="footer__links">
+        <a href="about.html">Biz haqimizda</a>
+        <a href="promo.html">Aksiya & Yangiliklar</a>
+        <a href="contact.html">Aloqa</a>
+      </div>
+    </div>
   </footer>
-
   <script src="script.js"></script>
+  <script>
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      document.querySelector('.navbar__links').classList.toggle('navbar__links--open');
+    });
+  </script>
 </body>
 </html>

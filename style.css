@@ -3057,3 +3057,920 @@ footer::before {
     min-width: 100%;
   }
 }
+
+/* ======= Enhanced Mobile Responsive Design ======= */
+
+/* ======= Mobile-First Approach ======= */
+@media (max-width: 480px) {
+  /* ======= Mobile Navbar ======= */
+  .navbar__container {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .navbar__logo img {
+    height: 40px;
+  }
+  
+  .navbar__links {
+    position: static;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    flex-direction: row;
+    width: 100%;
+    max-height: none;
+    padding: 0;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .navbar__links li {
+    margin: 0;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.9em;
+    min-height: 40px;
+  }
+  
+  /* ======= Mobile Hero Section ======= */
+  .hero {
+    min-height: 80vh;
+    padding: 40px 20px;
+  }
+  
+  .hero__title {
+    font-size: 2.2em;
+    line-height: 1.2;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+  
+  .hero__desc {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  .hero__buttons {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .vid__btn {
+    padding: 16px 32px;
+    font-size: 1.1em;
+    min-height: 48px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .btn.secondary {
+    padding: 14px 28px;
+    font-size: 1em;
+    min-height: 44px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .floating-chocolate {
+    display: none;
+  }
+  
+  /* ======= Mobile Features Section ======= */
+  .features {
+    padding: 60px 20px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 30px;
+  }
+  
+  .feature-item {
+    padding: 30px 20px;
+  }
+  
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .feature-item h3 {
+    font-size: 1.2em;
+  }
+  
+  /* ======= Mobile Featured Section ======= */
+  #featured {
+    margin: 40px 0 60px 0;
+    padding: 0 20px;
+  }
+  
+  #featured h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+  }
+  
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  .product-card {
+    padding: 24px 16px 16px 16px;
+  }
+  
+  .product-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .product-card h3 {
+    font-size: 1.1em;
+  }
+  
+  .product-card .price {
+    font-size: 1.2em;
+  }
+  
+  .product-card button {
+    padding: 12px 20px;
+    font-size: 0.9em;
+    min-height: 40px;
+    width: 100%;
+  }
+  
+  /* ======= Mobile Product Filter ======= */
+  .product-filter {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .product-filter label {
+    text-align: center;
+    margin-right: 0;
+  }
+  
+  .product-filter select {
+    width: 100%;
+    min-width: auto;
+    padding: 12px 16px;
+  }
+  
+  /* ======= Mobile Cart Section ======= */
+  #cart-section {
+    padding: 40px 16px;
+    margin: 20px auto;
+  }
+  
+  #cart-section h2 {
+    font-size: 2em;
+    margin-bottom: 24px;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .cart-item img {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 80px;
+  }
+  
+  .cart-item-details {
+    width: 100%;
+  }
+  
+  .cart-item-details .quantity-input {
+    width: 80px;
+    margin-right: 12px;
+  }
+  
+  #cart-summary {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #cart-summary button#checkout-btn {
+    width: 100%;
+    padding: 16px 24px;
+  }
+  
+  /* ======= Mobile Modal ======= */
+  .modal-content {
+    margin: 5% auto;
+    padding: 24px;
+    max-width: 90%;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.6em;
+  }
+  
+  .modal-content input {
+    padding: 14px;
+    font-size: 1em;
+  }
+  
+  .modal-content button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+  }
+  
+  /* ======= Mobile Contact Section ======= */
+  #contact-section {
+    padding: 40px 16px;
+    margin: 20px auto;
+  }
+  
+  #contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .contact-flex {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    padding: 12px;
+    font-size: 1em;
+  }
+  
+  #contact-form button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+  }
+  
+  .contact-info {
+    padding: 20px;
+  }
+  
+  /* ======= Mobile Footer ======= */
+  footer {
+    padding: 24px 0 16px 0;
+    margin-top: 40px;
+  }
+  
+  .footer__container {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 0 16px;
+  }
+  
+  .footer__links {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .footer__links a {
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  /* ======= Mobile Button Styles ======= */
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 0.9em;
+    min-height: 44px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .button-group .btn, .button-group button {
+    flex: none;
+    width: 100%;
+  }
+  
+  /* ======= Mobile Notification Styles ======= */
+  .notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .notification-content {
+    min-width: auto;
+    padding: 12px 16px;
+    font-size: 0.9em;
+  }
+  
+  /* ======= Mobile Loading & Empty States ======= */
+  .loading {
+    padding: 30px 16px;
+  }
+  
+  .loading::before {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+  }
+  
+  .no-products, .empty-cart {
+    padding: 40px 16px;
+  }
+  
+  /* ======= Mobile Promo & News ======= */
+  .promo-hero {
+    padding: 40px 16px;
+  }
+  
+  .promo-hero h1 {
+    font-size: 2.2em;
+  }
+  
+  .promo-hero p {
+    font-size: 1.1em;
+  }
+  
+  .promotions, .news {
+    padding: 40px 0;
+  }
+  
+  .promotions h2, .news h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .promo-grid, .news-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 16px;
+  }
+  
+  .promo-card__content, .news-card__content {
+    padding: 20px;
+  }
+  
+  .newsletter {
+    padding: 40px 0;
+  }
+  
+  .newsletter__content h2 {
+    font-size: 2em;
+  }
+  
+  .newsletter__form {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .newsletter__form input {
+    min-width: 100%;
+    padding: 14px 18px;
+  }
+  
+  /* ======= Mobile About Us ======= */
+  .about-hero {
+    padding: 40px 16px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.2em;
+  }
+  
+  .about-hero p {
+    font-size: 1.1em;
+  }
+  
+  .company-story, .our-values, .product-philosophy, .team-section {
+    padding: 40px 0;
+  }
+  
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    padding: 0 16px;
+  }
+  
+  .story-content h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .story-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .values-grid, .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+  
+  .value-card, .team-member {
+    padding: 24px 20px;
+  }
+  
+  .philosophy-features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+  
+  .about-cta {
+    padding: 40px 0;
+  }
+  
+  .cta-content h2 {
+    font-size: 2em;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .cta-buttons .btn {
+    min-width: 200px;
+  }
+  
+  /* ======= Mobile Interactive Experience ======= */
+  .interactive-experience {
+    padding: 60px 0;
+  }
+  
+  .experience-content h2 {
+    font-size: 2.2em;
+  }
+  
+  .experience-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  .experience-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 16px;
+  }
+  
+  .experience-card {
+    padding: 30px 20px;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  /* ======= Mobile Testimonials ======= */
+  .testimonials {
+    padding: 60px 0;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 16px;
+  }
+  
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+  
+  .testimonial-content p {
+    font-size: 1em;
+  }
+  
+  .testimonial-content p::before {
+    font-size: 2.5em;
+    top: -8px;
+    left: -12px;
+  }
+  
+  /* ======= Mobile Home Newsletter ======= */
+  .home-newsletter {
+    padding: 60px 0;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 2.2em;
+  }
+  
+  .newsletter-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .form-group input {
+    min-width: 100%;
+    padding: 16px 20px;
+  }
+  
+  .form-group .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 16px 24px;
+  }
+  
+  /* ======= Mobile Products Page ======= */
+  #products {
+    padding: 40px 0;
+  }
+  
+  #products .section-header h2 {
+    font-size: 2.2em;
+  }
+  
+  #products .product-filter {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #products .product-filter select {
+    min-width: 100%;
+  }
+  
+  #products .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 16px;
+  }
+}
+
+/* ======= Tablet Responsive Design ======= */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* ======= Tablet Navbar ======= */
+  .navbar__container {
+    padding: 14px 20px;
+  }
+  
+  .navbar__logo img {
+    height: 46px;
+  }
+  
+  .navbar__links {
+    gap: 24px;
+  }
+  
+  .btn {
+    padding: 11px 18px;
+    font-size: 1em;
+    min-height: 42px;
+  }
+  
+  /* ======= Tablet Hero Section ======= */
+  .hero {
+    min-height: 90vh;
+    padding: 60px 30px;
+  }
+  
+  .hero__title {
+    font-size: 3.2em;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.4em;
+  }
+  
+  .hero__desc {
+    font-size: 1.2em;
+  }
+  
+  .hero__buttons {
+    gap: 16px;
+  }
+  
+  .vid__btn {
+    padding: 16px 32px;
+    font-size: 1.1em;
+    min-height: 50px;
+  }
+  
+  /* ======= Tablet Features Section ======= */
+  .features {
+    padding: 80px 30px;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  /* ======= Tablet Featured Section ======= */
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 0 30px;
+  }
+  
+  /* ======= Tablet Product Filter ======= */
+  .product-filter {
+    padding: 18px;
+  }
+  
+  .product-filter select {
+    min-width: 180px;
+  }
+  
+  /* ======= Tablet Cart Section ======= */
+  #cart-section {
+    padding: 50px 30px;
+  }
+  
+  .cart-item {
+    padding: 18px;
+  }
+  
+  /* ======= Tablet Modal ======= */
+  .modal-content {
+    margin: 6% auto;
+    padding: 28px;
+    max-width: 80%;
+  }
+  
+  /* ======= Tablet Contact Section ======= */
+  #contact-section {
+    padding: 50px 30px;
+  }
+  
+  /* ======= Tablet Footer ======= */
+  .footer__container {
+    padding: 0 30px;
+  }
+  
+  /* ======= Tablet Button Styles ======= */
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    padding: 11px 22px;
+    font-size: 0.95em;
+    min-height: 42px;
+  }
+  
+  /* ======= Tablet Promo & News ======= */
+  .promo-hero {
+    padding: 60px 30px;
+  }
+  
+  .promo-hero h1 {
+    font-size: 2.8em;
+  }
+  
+  .promotions, .news {
+    padding: 60px 0;
+  }
+  
+  .promo-grid, .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 30px;
+  }
+  
+  /* ======= Tablet About Us ======= */
+  .about-hero {
+    padding: 60px 30px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.8em;
+  }
+  
+  .company-story, .our-values, .product-philosophy, .team-section {
+    padding: 60px 0;
+  }
+  
+  .story-grid {
+    gap: 50px;
+    padding: 0 30px;
+  }
+  
+  .values-grid, .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 0 30px;
+  }
+  
+  /* ======= Tablet Interactive Experience ======= */
+  .interactive-experience {
+    padding: 80px 0;
+  }
+  
+  .experience-cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 30px;
+  }
+  
+  /* ======= Tablet Testimonials ======= */
+  .testimonials {
+    padding: 80px 0;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 30px;
+  }
+  
+  /* ======= Tablet Home Newsletter ======= */
+  .home-newsletter {
+    padding: 80px 0;
+  }
+  
+  .form-group {
+    gap: 12px;
+  }
+  
+  .form-group input {
+    min-width: 200px;
+  }
+  
+  /* ======= Tablet Products Page ======= */
+  #products {
+    padding: 60px 0;
+  }
+  
+  #products .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 30px;
+  }
+}
+
+/* ======= Large Mobile & Small Tablet ======= */
+@media (min-width: 769px) and (max-width: 900px) {
+  .hero__title {
+    font-size: 3.8em;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .promo-grid, .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .values-grid, .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .experience-cards {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+/* ======= Touch Device Optimizations ======= */
+@media (hover: none) and (pointer: coarse) {
+  .btn:hover, button:hover, .vid__btn:hover, .add-to-cart-btn:hover, #checkout-btn:hover, button[type="submit"]:hover {
+    transform: none;
+    box-shadow: var(--snk-shadow);
+  }
+  
+  .product-card:hover, .feature-item:hover, .promo-card:hover, .news-card:hover, .value-card:hover, .team-member:hover, .experience-card:hover, .testimonial-card:hover {
+    transform: none;
+    box-shadow: var(--snk-shadow);
+  }
+  
+  .btn:active, button:active, .vid__btn:active, .add-to-cart-btn:active, #checkout-btn:active, button[type="submit"]:active {
+    transform: scale(0.98);
+  }
+  
+  .product-card:active, .feature-item:active, .promo-card:active, .news-card:active, .value-card:active, .team-member:active, .experience-card:active, .testimonial-card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ======= Landscape Mobile Optimization ======= */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: 70vh;
+    padding: 30px 20px;
+  }
+  
+  .hero__title {
+    font-size: 2.8em;
+    margin-bottom: 16px;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.3em;
+    margin-bottom: 12px;
+  }
+  
+  .hero__desc {
+    font-size: 1.1em;
+    margin-bottom: 24px;
+  }
+  
+  .features, .interactive-experience, .testimonials {
+    padding: 60px 0;
+  }
+  
+  .about-hero, .promo-hero {
+    padding: 40px 20px;
+  }
+  
+  .about-hero h1, .promo-hero h1 {
+    font-size: 2.4em;
+  }
+  
+  .company-story, .our-values, .product-philosophy, .team-section, .promotions, .news {
+    padding: 40px 0;
+  }
+}
+
+/* ======= High DPI Display Optimization ======= */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero__title, .hero__subtitle, .hero__desc {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ======= Print Styles ======= */
+@media print {
+  .navbar, .hero__floating-elements, .floating-chocolate, .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    display: none !important;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 20px;
+  }
+  
+  .hero__title {
+    font-size: 2em;
+    color: #000 !important;
+    background: none !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  
+  .hero__subtitle, .hero__desc {
+    color: #000 !important;
+  }
+  
+  .product-card, .feature-item, .promo-card, .news-card, .value-card, .team-member, .experience-card, .testimonial-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .features, .interactive-experience, .testimonials, .company-story, .our-values, .product-philosophy, .team-section, .promotions, .news {
+    padding: 20px 0;
+  }
+  
+  .section-header h2, .promotions h2, .news h2, .about-hero h1, .promo-hero h1, .story-content h2, .our-values h2, .product-philosophy h2, .team-section h2, .experience-content h2, .testimonials h2, .newsletter__content h2, .home-newsletter h2 {
+    color: #000 !important;
+    background: none !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  
+  .section-header h2::after, .promotions h2::after, .news h2::after, .story-content h2::after, .our-values h2::after, .product-philosophy h2::after, .team-section h2::after, .experience-content h2::after, .testimonials h2::after {
+    background: #000 !important;
+  }
+}

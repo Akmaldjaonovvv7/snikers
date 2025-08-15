@@ -3974,3 +3974,522 @@ footer::before {
     background: #000 !important;
   }
 }
+
+/* ======= Enhanced Mobile Button Styles ======= */
+
+/* ======= Mobile Button Base Styles ======= */
+@media (max-width: 480px) {
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    /* ======= Mobile Button Sizing ======= */
+    padding: 16px 24px;
+    font-size: 1em;
+    min-height: 56px;
+    width: 100%;
+    max-width: 320px;
+    
+    /* ======= Mobile Button Typography ======= */
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.3;
+    
+    /* ======= Mobile Button Layout ======= */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    
+    /* ======= Mobile Button Spacing ======= */
+    margin: 8px 0;
+    
+    /* ======= Mobile Button Touch ======= */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    
+    /* ======= Mobile Button Animation ======= */
+    transition: all 0.2s ease;
+  }
+  
+  /* ======= Mobile Button Hover Effects ======= */
+  .btn:hover, button:hover, .vid__btn:hover, .add-to-cart-btn:hover, #checkout-btn:hover, button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+  }
+  
+  /* ======= Mobile Button Active States ======= */
+  .btn:active, button:active, .vid__btn:active, .add-to-cart-btn:active, #checkout-btn:active, button[type="submit"]:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 4px 16px rgba(230,32,32,0.3);
+  }
+  
+  /* ======= Mobile Button Focus States ======= */
+  .btn:focus, button:focus, .vid__btn:focus, .add-to-cart-btn:focus, #checkout-btn:focus, button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(230,32,32,0.3), 0 8px 25px rgba(230,32,32,0.4);
+  }
+  
+  /* ======= Mobile Button Disabled States ======= */
+  .btn:disabled, button:disabled, .vid__btn:disabled, .add-to-cart-btn:disabled, #checkout-btn:disabled, button[type="submit"]:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.6;
+  }
+  
+  /* ======= Mobile Button Variants ======= */
+  .btn.secondary, button.secondary {
+    background: linear-gradient(135deg, var(--snk-yellow) 0%, var(--snk-orange) 100%);
+    color: var(--snk-brown);
+    box-shadow: 0 4px 16px rgba(251,232,166,0.4);
+  }
+  
+  .btn.secondary:hover, button.secondary:hover {
+    background: linear-gradient(135deg, var(--snk-orange) 0%, var(--snk-yellow) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251,232,166,0.5);
+  }
+  
+  .btn.outline, button.outline {
+    background: transparent;
+    color: var(--snk-red);
+    border: 3px solid var(--snk-red);
+    box-shadow: none;
+  }
+  
+  .btn.outline:hover, button.outline:hover {
+    background: var(--snk-red);
+    color: var(--snk-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.3);
+  }
+  
+  /* ======= Mobile Button Sizes ======= */
+  .btn.small, button.small {
+    padding: 12px 20px;
+    font-size: 0.9em;
+    min-height: 48px;
+    max-width: 200px;
+  }
+  
+  .btn.large, button.large {
+    padding: 20px 32px;
+    font-size: 1.2em;
+    min-height: 64px;
+    max-width: 360px;
+  }
+  
+  /* ======= Mobile Button Groups ======= */
+  .button-group {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .button-group .btn, .button-group button {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  /* ======= Mobile Icon Buttons ======= */
+  .btn.icon-only, button.icon-only {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: none;
+  }
+  
+  .btn.icon-only.small, button.icon-only.small {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .btn.icon-only.large, button.icon-only.large {
+    width: 72px;
+    height: 72px;
+  }
+  
+  /* ======= Mobile Loading Buttons ======= */
+  .btn.loading, button.loading {
+    position: relative;
+    color: transparent;
+  }
+  
+  .btn.loading::after, button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid transparent;
+    border-top: 3px solid var(--snk-white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* ======= Mobile Specific Button Styles ======= */
+  .vid__btn {
+    background: var(--snk-gradient-primary);
+    padding: 18px 36px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: var(--snk-radius-small);
+    box-shadow: 0 6px 20px rgba(230,32,32,0.3);
+    min-height: 60px;
+    max-width: 360px;
+  }
+  
+  .vid__btn:hover {
+    background: var(--snk-gradient-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(230,32,32,0.5);
+  }
+  
+  .add-to-cart-btn {
+    background: var(--snk-gradient-primary);
+    padding: 16px 28px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: var(--snk-radius-small);
+    box-shadow: 0 4px 16px rgba(230,32,32,0.3);
+    min-height: 52px;
+    max-width: 300px;
+  }
+  
+  .add-to-cart-btn:hover {
+    background: var(--snk-gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+  }
+  
+  #checkout-btn, button[type="submit"] {
+    background: var(--snk-gradient-primary);
+    padding: 18px 32px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: var(--snk-radius-small);
+    box-shadow: 0 4px 16px rgba(230,32,32,0.3);
+    min-height: 56px;
+    max-width: 320px;
+  }
+  
+  #checkout-btn:hover, button[type="submit"]:hover {
+    background: var(--snk-gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+  }
+  
+  /* ======= Mobile Product Card Buttons ======= */
+  .product-card button {
+    background: var(--snk-gradient-primary);
+    color: var(--snk-white);
+    border: none;
+    border-radius: var(--snk-radius-small);
+    padding: 14px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(230,32,32,0.3);
+    font-family: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 52px;
+    line-height: 1.2;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .product-card button:hover {
+    background: var(--snk-gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+    color: var(--snk-white);
+  }
+  
+  /* ======= Mobile Cart Buttons ======= */
+  .cart-item-details button.remove-btn {
+    background: none;
+    border: none;
+    color: var(--snk-red);
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s ease;
+    padding: 12px 16px;
+    border-radius: var(--snk-radius-small);
+    min-height: 44px;
+    width: auto;
+    max-width: none;
+  }
+  
+  .cart-item-details button.remove-btn:hover {
+    background: rgba(230,32,32,0.1);
+    color: #b31818;
+    transform: scale(1.05);
+  }
+  
+  /* ======= Mobile Modal Buttons ======= */
+  .modal-content button[type="submit"] {
+    margin-top: 20px;
+    padding: 18px 24px;
+    background: var(--snk-gradient-primary);
+    color: var(--snk-white);
+    border: none;
+    border-radius: var(--snk-radius-small);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    width: 100%;
+    max-width: none;
+    min-height: 56px;
+  }
+  
+  .modal-content button[type="submit"]:hover {
+    background: var(--snk-gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+  }
+  
+  /* ======= Mobile Contact Form Buttons ======= */
+  #contact-form button[type="submit"] {
+    margin-top: 20px;
+    padding: 18px 24px;
+    background: var(--snk-gradient-primary);
+    color: var(--snk-white);
+    border: none;
+    border-radius: var(--snk-radius-small);
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    width: 100%;
+    max-width: none;
+    min-height: 56px;
+  }
+  
+  #contact-form button[type="submit"]:hover {
+    background: var(--snk-gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+  }
+  
+  /* ======= Mobile Newsletter Buttons ======= */
+  .newsletter__form .btn {
+    padding: 18px 32px;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 320px;
+    min-height: 56px;
+  }
+  
+  .form-group .btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 18px 24px;
+    min-height: 56px;
+  }
+  
+  /* ======= Mobile About Us Buttons ======= */
+  .cta-buttons .btn {
+    min-width: 240px;
+    max-width: 320px;
+    min-height: 56px;
+  }
+  
+  /* ======= Mobile Button Animations ======= */
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    animation: buttonAppear 0.4s ease-out;
+  }
+  
+  @keyframes buttonAppear {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* ======= Mobile Button Shimmer Effect ======= */
+  .btn::before, button::before, .vid__btn::before, .add-to-cart-btn::before, #checkout-btn::before, button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .btn:hover::before, button:hover::before, .vid__btn:hover::before, .add-to-cart-btn:hover::before, #checkout-btn:hover::before, button[type="submit"]:hover::before {
+    left: 100%;
+  }
+  
+  /* ======= Mobile Button Glow Effect ======= */
+  .btn:hover, button:hover, .vid__btn:hover, .add-to-cart-btn:hover, #checkout-btn:hover, button[type="submit"]:hover {
+    animation: mobileGlow 2s ease-in-out infinite;
+  }
+  
+  @keyframes mobileGlow {
+    0%, 100% { 
+      box-shadow: 0 8px 25px rgba(230,32,32,0.4);
+    }
+    50% { 
+      box-shadow: 0 8px 25px rgba(230,32,32,0.6), 0 0 20px rgba(230,32,32,0.3);
+    }
+  }
+}
+
+/* ======= Tablet Button Optimizations ======= */
+@media (min-width: 481px) and (max-width: 768px) {
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    padding: 14px 26px;
+    font-size: 0.95em;
+    min-height: 50px;
+    max-width: 280px;
+  }
+  
+  .vid__btn {
+    padding: 16px 32px;
+    font-size: 1.1em;
+    min-height: 54px;
+    max-width: 320px;
+  }
+  
+  .add-to-cart-btn {
+    padding: 14px 26px;
+    font-size: 1em;
+    min-height: 48px;
+    max-width: 260px;
+  }
+  
+  #checkout-btn, button[type="submit"] {
+    padding: 16px 28px;
+    font-size: 1em;
+    min-height: 52px;
+    max-width: 280px;
+  }
+  
+  .button-group {
+    gap: 12px;
+  }
+  
+  .button-group .btn, .button-group button {
+    max-width: 240px;
+  }
+}
+
+/* ======= Large Mobile Button Optimizations ======= */
+@media (min-width: 769px) and (max-width: 900px) {
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    padding: 13px 24px;
+    font-size: 0.98em;
+    min-height: 48px;
+    max-width: 260px;
+  }
+  
+  .vid__btn {
+    padding: 17px 34px;
+    font-size: 1.15em;
+    min-height: 58px;
+    max-width: 340px;
+  }
+  
+  .add-to-cart-btn {
+    padding: 13px 26px;
+    font-size: 1.02em;
+    min-height: 50px;
+    max-width: 270px;
+  }
+  
+  #checkout-btn, button[type="submit"] {
+    padding: 15px 30px;
+    font-size: 1.02em;
+    min-height: 54px;
+    max-width: 300px;
+  }
+}
+
+/* ======= Touch Device Button Enhancements ======= */
+@media (hover: none) and (pointer: coarse) {
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    /* ======= Touch Button Sizing ======= */
+    min-height: 56px;
+    padding: 16px 24px;
+    
+    /* ======= Touch Button States ======= */
+    transition: all 0.15s ease;
+  }
+  
+  .btn:active, button:active, .vid__btn:active, .add-to-cart-btn:active, #checkout-btn:active, button[type="submit"]:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(230,32,32,0.3);
+  }
+  
+  .btn:focus, button:focus, .vid__btn:focus, .add-to-cart-btn:focus, #checkout-btn:focus, button[type="submit"]:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 4px rgba(230,32,32,0.3), 0 4px 16px rgba(230,32,32,0.3);
+  }
+}
+
+/* ======= Mobile Button Loading States ======= */
+@media (max-width: 480px) {
+  .btn.loading, button.loading, .vid__btn.loading, .add-to-cart-btn.loading, #checkout-btn.loading, button[type="submit"].loading {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+  
+  .btn.loading::after, button.loading::after, .vid__btn.loading::after, .add-to-cart-btn.loading::after, #checkout-btn.loading::after, button[type="submit"].loading::after {
+    animation: mobileSpin 1s linear infinite;
+  }
+  
+  @keyframes mobileSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+/* ======= Mobile Button Accessibility ======= */
+@media (max-width: 480px) {
+  .btn, button, .vid__btn, .add-to-cart-btn, #checkout-btn, button[type="submit"] {
+    /* ======= Accessibility Features ======= */
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+    /* ======= Screen Reader Support ======= */
+    aria-label: attr(aria-label);
+    
+    /* ======= Focus Indicators ======= */
+    outline: none;
+  }
+  
+  .btn:focus-visible, button:focus-visible, .vid__btn:focus-visible, .add-to-cart-btn:focus-visible, #checkout-btn:focus-visible, button[type="submit"]:focus-visible {
+    outline: 3px solid var(--snk-red);
+    outline-offset: 2px;
+  }
+}
